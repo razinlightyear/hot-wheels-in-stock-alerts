@@ -9,7 +9,7 @@ jobs:
   check-stock:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Needed to push the state.json update
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
