@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Force Node/npm to stream output without a terminal
+export CI=true
+# Silence the npm update notice
+export npm_config_update_notifier=false
+
 # Only apply Mac paths if running on macOS
 if [ "$(uname)" == "Darwin" ]; then
   export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.asdf/shims:$HOME/.asdf/bin:/usr/bin:/bin:/usr/sbin:/sbin"
